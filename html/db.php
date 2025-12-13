@@ -1,14 +1,13 @@
 <?php
-// These match the docker-compose environment variables
-$host = 'db';
-$user = 'user';
-$pass = 'password';
+// Configuration for Render Deployment
+$host = '127.0.0.1'; // Localhost inside the container
+$user = 'ctf_user';
+$pass = 'ctf_pass';
 $dbname = 'ctf_db';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 if ($conn->connect_error) {
-    // This helps us debug if it fails again
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
