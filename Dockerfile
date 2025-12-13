@@ -10,7 +10,7 @@ RUN docker-php-ext-install mysqli
 # Set the working directory
 WORKDIR /var/www/html
 
-COPY . /var/www/html/
+COPY html /var/www/html/
 
 # Copy the Database Initialization Script
 COPY db/init.sql /docker-entrypoint-initdb.d/init.sql
